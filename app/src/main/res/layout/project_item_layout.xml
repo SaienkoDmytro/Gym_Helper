@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="projectModel"
+            type="com.example.gymhelper.ProjectModel" />
+
+        <variable
+            name="listener"
+            type="com.example.gymhelper.OnClickItemInterface" />
+    </data>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginHorizontal="@dimen/margin10"
+        android:layout_marginTop="@dimen/margin10"
+        app:cardCornerRadius="@dimen/margin10"
+        app:cardElevation="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@color/card"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/exersizeName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginVertical="@dimen/margin10"
+                android:layout_marginStart="@dimen/margin10"
+                android:layout_marginTop="@dimen/margin10"
+                android:text="@{projectModel.exercise ,default=Exersize}"
+                android:textColor="@color/purple_700"
+                android:textSize="@dimen/text_size20"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/setsShow"
+                android:layout_below="@+id/exersizeName"
+                android:layout_alignStart="@+id/exersizeName"
+                android:layout_marginEnd="@dimen/margin10"
+                android:padding="@dimen/padding5"
+                android:textColor="@color/back"
+                android:text="@{String.valueOf(projectModel.reps1)}"
+                android:textSize="@dimen/text_size15"
+                android:textStyle="bold"
+                app:drawableTint="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/exersizeName"
+                android:layout_alignStart="@+id/setsShow"
+                android:layout_marginStart="40dp"
+                android:padding="@dimen/padding5"
+                android:textColor="@color/back"
+                android:text="@{String.valueOf(projectModel.reps2)}"
+                android:textSize="@dimen/text_size15"
+                android:textStyle="bold"
+                app:drawableTint="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/exersizeName"
+                android:layout_alignStart="@+id/setsShow"
+                android:layout_marginStart="80dp"
+                android:padding="@dimen/padding5"
+                android:textColor="@color/back"
+                android:text="@{String.valueOf(projectModel.reps3)}"
+                android:textSize="@dimen/text_size15"
+                android:textStyle="bold"
+                app:drawableTint="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/exersizeName"
+                android:layout_alignStart="@+id/setsShow"
+                android:layout_marginStart="120dp"
+                android:padding="@dimen/padding5"
+                android:textColor="@color/back"
+                android:text="@{String.valueOf(projectModel.reps4)}"
+                android:textSize="@dimen/text_size15"
+                android:textStyle="bold"
+                app:drawableTint="@color/black" />
+
+            <ImageView
+                android:id="@+id/imgDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="45dp"
+                android:layout_marginEnd="@dimen/margin20"
+                android:onClick="@{() -> listener.onClickItem(projectModel, false)}"
+                android:src="@drawable/ic_delete"
+                app:tint="@color/black" />
+
+            <ImageView
+                android:id="@+id/imgEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="45dp"
+                android:layout_marginEnd="@dimen/margin20"
+                android:layout_toStartOf="@+id/imgDelete"
+                android:onClick="@{() -> listener.onClickItem(projectModel, true)}"
+                android:src="@drawable/ic_edit"
+                app:tint="@color/black" />
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</layout>

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Gym Helper</string>
+    <string name="start_timer">Start timer</string>
+    <string name="add_task">Add task</string>
+    <string name="exercise">Exercise</string>
+    <string name="intensity">Intensity</string>
+    <string name="sets">Sets</string>
+    <string name="reps_1">Reps #1</string>
+    <string name="reps_2">Reps #2</string>
+    <string name="reps_3">Reps #3</string>
+    <string name="reps_4">Reps #4</string>
+    <string name="add">Add</string>
+</resources>
