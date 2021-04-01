@@ -14,10 +14,11 @@
     <string name="day_project">Day project</string>
     <string name="workout_project">Workout project</string>
     <string name="log_in_project">Log in Project</string>
-    <string name="start">start</string>
     <string name="reset">reset</string>
     <string name="_00_00">00:00</string>
     <string name="set">Set</string>
+    <string name="pause">Pause</string>
+    <string name="start">Start</string>
     <string name="minutes">Minutes</string>
     <string name="login_image">Login Image</string>
 </resources>
