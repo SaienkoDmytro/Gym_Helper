@@ -10,7 +10,6 @@ import com.example.gymhelper.ProjectModel;
 import com.example.gymhelper.Repository.AppRepo;
 
 import java.util.List;
-import java.util.concurrent.ExecutionException;
 
 public class ProjectViewModel extends AndroidViewModel {
 

@@ -10,4 +10,14 @@
     <string name="reps_3">Reps #3</string>
     <string name="reps_4">Reps #4</string>
     <string name="add">Add</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="day_project">Day project</string>
+    <string name="workout_project">Workout project</string>
+    <string name="log_in_project">Log in Project</string>
+    <string name="start">start</string>
+    <string name="reset">reset</string>
+    <string name="_00_00">00:00</string>
+    <string name="set">Set</string>
+    <string name="minutes">Minutes</string>
+    <string name="login_image">Login Image</string>
 </resources>

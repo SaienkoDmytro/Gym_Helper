@@ -2,6 +2,7 @@ package com.example.gymhelper;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
@@ -22,9 +23,13 @@ public class MainActivity extends AppCompatActivity implements OnClickItemInterf
         super.onCreate(savedInstanceState);
         com.example.gymhelper.databinding.ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         binding.projectRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         adapter = new ProjectAdapter(this);
         binding.projectRecyclerView.setAdapter(adapter);
+
 
         binding.addProject.setOnClickListener(view -> startActivity(new Intent(MainActivity.this, AddProjectActivity.class)));
 
@@ -53,5 +58,11 @@ public class MainActivity extends AppCompatActivity implements OnClickItemInterf
             projectViewModel.deleteProject(projectModel);
         }
 
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return super.onSupportNavigateUp();
     }
 }
