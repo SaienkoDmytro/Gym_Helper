@@ -21,4 +21,10 @@
     <string name="start">Start</string>
     <string name="minutes">Minutes</string>
     <string name="login_image">Login Image</string>
+    <string name="please_enter_your_login">Please enter your login</string>
+    <string name="please_enter_your_password">Please enter your password</string>
+    <string name="log_in">Log in</string>
+    <string name="registration">Registration</string>
+    <string name="please_confirm_your_password">Please confirm your password</string>
+    <string name="change_account_data">Change account data</string>
 </resources>

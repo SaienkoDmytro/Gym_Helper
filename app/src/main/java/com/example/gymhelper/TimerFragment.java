@@ -16,6 +16,7 @@ import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
 
+
 import com.example.gymhelper.databinding.FragmentTimerBinding;
 
 import org.jetbrains.annotations.NotNull;
@@ -202,6 +203,9 @@ public class TimerFragment extends Fragment {
         }
     }
 
-
-
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
+    }
 }
