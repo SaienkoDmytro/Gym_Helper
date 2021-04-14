@@ -11,17 +11,20 @@
         tools:layout="@layout/fragment_start" >
         <action
             android:id="@+id/action_startFragment_to_timerFragment"
+            app:launchSingleTop="true"
             app:destination="@id/timerFragment" />
         <action
             android:id="@+id/action_startFragment_to_mainActivity"
+            app:launchSingleTop="true"
             app:destination="@id/mainActivity" />
         <action
             android:id="@+id/action_startFragment_to_mainActivity2"
             app:destination="@id/mainActivity"
             app:launchSingleTop="true" />
         <action
-            android:id="@+id/action_startFragment_to_registrationFragment"
-            app:destination="@id/registrationFragment" />
+            android:id="@+id/action_startFragment_to_loginFragment"
+            app:launchSingleTop="true"
+            app:destination="@id/loginFragment" />
     </fragment>
     <fragment
         android:id="@+id/timerFragment"
@@ -30,9 +33,11 @@
         tools:layout="@layout/fragment_timer" >
         <action
             android:id="@+id/action_timerFragment_to_startFragment"
+            app:launchSingleTop="true"
             app:destination="@id/startFragment" />
         <action
             android:id="@+id/action_timerFragment_to_mainActivity"
+            app:launchSingleTop="true"
             app:destination="@id/mainActivity" />
         <action
             android:id="@+id/action_timerFragment_to_mainActivity2"
@@ -45,21 +50,22 @@
         android:label="activity_main"
         tools:layout="@layout/activity_main" />
     <fragment
-        android:id="@+id/registrationFragment"
-        android:name="com.example.gymhelper.Account.RegistrationFragment"
-        android:label="registration_fragment"
-        tools:layout="@layout/registration_fragment" >
+        android:id="@+id/loginFragment"
+        android:name="com.example.gymhelper.Account.LoginFragment"
+        android:label="login_fragment"
+        tools:layout="@layout/login_fragment" >
         <action
-            android:id="@+id/action_registrationFragment_to_accountFragment"
+            android:id="@+id/action_loginFragment_to_accountFragment"
+            app:launchSingleTop="true"
             app:destination="@id/accountFragment" />
         <action
-            android:id="@+id/action_registrationFragment_to_startFragment"
-            app:destination="@id/startFragment"
-            app:launchSingleTop="true" />
+            android:id="@+id/action_loginFragment_to_startFragment"
+            app:launchSingleTop="true"
+            app:destination="@id/startFragment"/>
         <action
-            android:id="@+id/action_registrationFragment_to_changeAccountFragment"
-            app:destination="@id/changeAccountFragment"
-            app:launchSingleTop="true" />
+            android:id="@+id/action_loginFragment_to_registrationFragment"
+            app:launchSingleTop="true"
+            app:destination="@id/registrationFragment" />
     </fragment>
     <fragment
         android:id="@+id/accountFragment"
@@ -67,25 +73,22 @@
         android:label="account_fragment"
         tools:layout="@layout/account_fragment" >
         <action
-            android:id="@+id/action_accountFragment_to_changeAccountFragment"
-            app:destination="@id/changeAccountFragment" />
+            android:id="@+id/action_accountFragment_to_registrationFragment"
+            app:launchSingleTop="true"
+            app:destination="@id/registrationFragment" />
         <action
             android:id="@+id/action_accountFragment_to_startFragment"
-            app:destination="@id/startFragment"
             app:launchSingleTop="true"
-            app:popUpTo="@id/startFragment"
-            app:popUpToInclusive="true" />
+            app:destination="@id/startFragment" />
     </fragment>
     <fragment
-        android:id="@+id/changeAccountFragment"
-        android:name="com.example.gymhelper.Account.ChangeAccountFragment"
-        android:label="change_account_fragment"
-        tools:layout="@layout/change_account_fragment" >
+        android:id="@+id/registrationFragment"
+        android:name="com.example.gymhelper.Account.RegistrationFragment"
+        android:label="registration_fragment"
+        tools:layout="@layout/registration_fragment" >
         <action
-            android:id="@+id/action_changeAccountFragment_to_registrationFragment"
-            app:destination="@id/registrationFragment"
-            app:popUpTo="@id/registrationFragment"
-            app:popUpToInclusive="true"
+            android:id="@+id/action_registrationFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
             app:launchSingleTop="true" />
     </fragment>
 </navigation>

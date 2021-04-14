@@ -38,10 +38,6 @@ public class AccountFragment extends Fragment {
     private AccountFragmentBinding binding;
     private View view;
     private NavController navController;
-    private NavigationView navView;
-    private DrawerLayout drawerLayout;
-    private Toolbar toolbar;
-    private AppBarConfiguration appBarConfiguration;
 
     public static AccountFragment newInstance() {
         return new AccountFragment();
@@ -50,6 +46,7 @@ public class AccountFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
     }
 
 
@@ -73,21 +70,6 @@ public class AccountFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         navController = Navigation.findNavController(view);
-        navView = binding.nvView;
-        appBarConfiguration = new AppBarConfiguration.Builder(R.id.nav_settings, R.id.nav_exit).setOpenableLayout(binding.drawerLayout).build();
-        NavigationUI.setupWithNavController(navView, navController);
-        navController.addOnDestinationChangedListener(new NavController.OnDestinationChangedListener() {
-            @Override
-            public void onDestinationChanged(@NonNull NavController controller, @NonNull NavDestination destination, @Nullable Bundle arguments) {
-                if (destination.getId() == R.id.nav_settings ) {
-                    Navigation.findNavController(view).navigate(R.id.action_accountFragment_to_changeAccountFragment);
-                }
-                if (destination.getId() == R.id.nav_exit) {
-                    navController.navigate(R.id.action_accountFragment_to_startFragment);
-                }
-            }
-        });
-
     }
 
     @Override
@@ -101,7 +83,7 @@ public class AccountFragment extends Fragment {
     @Override
     public boolean onOptionsItemSelected(@NotNull MenuItem item) {
         if (item.getItemId() == R.id.nav_settings ) {
-            Navigation.findNavController(view).navigate(R.id.action_accountFragment_to_changeAccountFragment);
+            Navigation.findNavController(view).navigate(R.id.action_accountFragment_to_registrationFragment);
         }
         if (item.getItemId() == R.id.nav_exit) {
             navController.navigate(R.id.action_accountFragment_to_startFragment);

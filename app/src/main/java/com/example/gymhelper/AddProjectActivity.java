@@ -14,6 +14,8 @@ import androidx.lifecycle.ViewModelProvider;
 import com.example.gymhelper.ViewModel.ProjectViewModel;
 import com.example.gymhelper.databinding.ActivityAddProjectBinding;
 
+import java.util.Objects;
+
 public class AddProjectActivity extends AppCompatActivity {
 
     private ActivityAddProjectBinding binding;
@@ -48,7 +50,7 @@ public class AddProjectActivity extends AppCompatActivity {
             isEdit = true;
         }
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
         binding.btnAddProject.setOnClickListener(view -> {
 

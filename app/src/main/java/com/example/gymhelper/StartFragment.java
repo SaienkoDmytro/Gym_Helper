@@ -31,6 +31,7 @@ public class StartFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         binding = FragmentStartBinding.inflate(inflater, container, false);
+        ((StartActivity)getActivity()).hideHome();
         return binding.getRoot();
     }
 
@@ -41,11 +42,12 @@ public class StartFragment extends Fragment {
 
         NavController navController = Navigation.findNavController(view);
 
+
         binding.buttonStartTimer.setOnClickListener(v -> navController.navigate(R.id.action_startFragment_to_timerFragment));
 
         binding.buttonWorkoutProjectActivity.setOnClickListener(v -> navController.navigate(R.id.action_startFragment_to_mainActivity));
 
-        binding.buttonLoginFragment.setOnClickListener(v -> navController.navigate(R.id.action_startFragment_to_registrationFragment));
+        binding.buttonLoginFragment.setOnClickListener(v -> navController.navigate(R.id.action_startFragment_to_loginFragment));
 
     }
 

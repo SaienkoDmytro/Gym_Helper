@@ -6,14 +6,30 @@ import androidx.navigation.Navigation;
 
 import android.os.Bundle;
 
-public class StartActivity extends AppCompatActivity {
+import java.util.Objects;
 
-    NavController navController;
+public class StartActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
-        navController = Navigation.findNavController(this, R.id.fragment);
+        NavController navController = Navigation.findNavController(this, R.id.fragment);
+
+    }
+
+    public void showHome(){
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    }
+
+    public void hideHome(){
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return super.onSupportNavigateUp();
+
     }
 }

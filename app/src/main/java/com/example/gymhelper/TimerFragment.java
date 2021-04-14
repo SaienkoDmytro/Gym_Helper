@@ -46,6 +46,7 @@ public class TimerFragment extends Fragment {
                              Bundle savedInstanceState) {
         binding = FragmentTimerBinding.inflate(inflater, container, false);
         view = binding.getRoot();
+        ((StartActivity)getActivity()).showHome();
         return view;
     }
 

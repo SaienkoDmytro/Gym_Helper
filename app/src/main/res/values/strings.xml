@@ -24,7 +24,11 @@
     <string name="please_enter_your_login">Please enter your login</string>
     <string name="please_enter_your_password">Please enter your password</string>
     <string name="log_in">Log in</string>
-    <string name="registration">Registration</string>
+    <string name="registration">Don\'t have account? Please register here.</string>
     <string name="please_confirm_your_password">Please confirm your password</string>
     <string name="change_account_data">Change account data</string>
+    <string name="register_new_account">Register new account</string>
+    <string name="log_out_from_account">Log out from account</string>
+    <string name="register_my_account">Register my account</string>
+    <string name="you_successfully_login_into_account">You successfully login into Account:</string>
 </resources>
