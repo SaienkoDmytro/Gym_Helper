@@ -1,6 +1,5 @@
 package com.example.gymhelper;
 
-import android.content.Context;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -47,7 +46,7 @@ public class StartFragment extends Fragment {
 
         binding.buttonWorkoutProjectActivity.setOnClickListener(v -> navController.navigate(R.id.action_startFragment_to_mainActivity));
 
-        binding.buttonLoginFragment.setOnClickListener(v -> navController.navigate(R.id.action_startFragment_to_loginFragment));
+        binding.buttonAccountFragment.setOnClickListener(v -> navController.navigate(R.id.action_startFragment_to_accountFragment));
 
     }
 

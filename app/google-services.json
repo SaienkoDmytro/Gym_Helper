@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "238155050275",
+    "project_id": "gym-helper-b4ca2",
+    "storage_bucket": "gym-helper-b4ca2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:238155050275:android:4daf03e0cde323ff227096",
+        "android_client_info": {
+          "package_name": "com.example.gymhelper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "238155050275-d6h6u6qn1ol0obmahsjcktfvqnn8hh0g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzaz4EMigv93PZIaodKeUjZke9i3B4Dgc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "238155050275-d6h6u6qn1ol0obmahsjcktfvqnn8hh0g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

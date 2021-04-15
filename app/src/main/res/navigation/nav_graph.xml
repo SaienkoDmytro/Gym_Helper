@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/startFragment">
+    app:startDestination="@id/loginFragment">
     <fragment
         android:id="@+id/startFragment"
         android:name="com.example.gymhelper.StartFragment"
@@ -18,13 +18,9 @@
             app:launchSingleTop="true"
             app:destination="@id/mainActivity" />
         <action
-            android:id="@+id/action_startFragment_to_mainActivity2"
-            app:destination="@id/mainActivity"
+            android:id="@+id/action_startFragment_to_accountFragment"
+            app:destination="@id/accountFragment"
             app:launchSingleTop="true" />
-        <action
-            android:id="@+id/action_startFragment_to_loginFragment"
-            app:launchSingleTop="true"
-            app:destination="@id/loginFragment" />
     </fragment>
     <fragment
         android:id="@+id/timerFragment"
@@ -54,10 +50,7 @@
         android:name="com.example.gymhelper.Account.LoginFragment"
         android:label="login_fragment"
         tools:layout="@layout/login_fragment" >
-        <action
-            android:id="@+id/action_loginFragment_to_accountFragment"
-            app:launchSingleTop="true"
-            app:destination="@id/accountFragment" />
+
         <action
             android:id="@+id/action_loginFragment_to_startFragment"
             app:launchSingleTop="true"
@@ -73,13 +66,13 @@
         android:label="account_fragment"
         tools:layout="@layout/account_fragment" >
         <action
-            android:id="@+id/action_accountFragment_to_registrationFragment"
-            app:launchSingleTop="true"
-            app:destination="@id/registrationFragment" />
-        <action
             android:id="@+id/action_accountFragment_to_startFragment"
             app:launchSingleTop="true"
             app:destination="@id/startFragment" />
+        <action
+            android:id="@+id/action_accountFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:launchSingleTop="true" />
     </fragment>
     <fragment
         android:id="@+id/registrationFragment"
@@ -89,6 +82,10 @@
         <action
             android:id="@+id/action_registrationFragment_to_loginFragment"
             app:destination="@id/loginFragment"
+            app:launchSingleTop="true" />
+        <action
+            android:id="@+id/action_registrationFragment_to_accountFragment"
+            app:destination="@id/accountFragment"
             app:launchSingleTop="true" />
     </fragment>
 </navigation>

@@ -4,6 +4,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Account.AccountFragment">
 
     <LinearLayout
@@ -11,21 +13,77 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.AppCompat.ButtonBar.AlertDialog"
+            android:id="@+id/button_verify"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin20"
+            android:layout_margin="@dimen/margin10"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            android:maxLines="1"
+            android:text="@string/click_here_to_verify_your_email_address" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/margin10"
-            android:text="@string/you_successfully_login_into_account"
+            android:textColor="@color/white"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/your_profile"
+            android:textStyle="bold"
             android:textSize="@dimen/text_size20">
         </TextView>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/login_name"
+            android:textColor="@color/white"
+            android:layout_margin="@dimen/margin10"
+            android:text="@string/account_name"
+            android:textSize="@dimen/text_size20">
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:id="@+id/account_name"
             android:layout_margin="@dimen/margin10"
             android:textSize="@dimen/text_size20">
         </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_margin="@dimen/margin10"
+            android:text="@string/your_email"
+            android:textSize="@dimen/text_size20">
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:id="@+id/email"
+            android:layout_margin="@dimen/margin10"
+            android:textSize="@dimen/text_size20">
+        </TextView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_goto_main_activity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_marginHorizontal="@dimen/margin20"
+            android:padding="@dimen/padding5"
+            android:maxLines="1"
+            android:text="@string/return_to_application"
+            app:cornerRadius="10dp"
+            app:elevation="10dp" />
 
     </LinearLayout>
 

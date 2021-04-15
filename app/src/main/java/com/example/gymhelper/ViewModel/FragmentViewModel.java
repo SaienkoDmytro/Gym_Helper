@@ -6,25 +6,27 @@ import androidx.lifecycle.ViewModel;
 
 public class FragmentViewModel extends ViewModel {
 
-    private final MutableLiveData<String> account = new MutableLiveData<>();
+    private final MutableLiveData<String> email = new MutableLiveData<>();
     private final MutableLiveData<String> password = new MutableLiveData<>();
+    private final MutableLiveData<String> account = new MutableLiveData<>();
 
+
+    public LiveData<String> getEmail() {
+        return email;
+    }
 
     public LiveData<String> getAccount() {
         return account;
     }
 
-    public LiveData<String> getPassword() {
-        return password;
+    public void setEmail(String mail) {
+        email.setValue(mail);
     }
 
     public void setAccount(String acc) {
         account.setValue(acc);
     }
 
-    public void setPassword(String pass) {
-        password.setValue(pass);
-    }
 
 
 }

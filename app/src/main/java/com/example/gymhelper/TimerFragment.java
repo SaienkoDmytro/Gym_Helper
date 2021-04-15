@@ -61,12 +61,12 @@ public class TimerFragment extends Fragment {
         binding.buttonSet.setOnClickListener(v -> {
             String input = binding.editTextInput.getText().toString();
             if (input.length() == 0) {
-                Toast.makeText(getActivity(), "Field can't be empty", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), R.string.field_empty, Toast.LENGTH_SHORT).show();
                 return;
             }
             long millisInput = Long.parseLong(input) * 60000;
             if (millisInput == 0) {
-                Toast.makeText(getActivity(), "Please enter a positive number", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), R.string.possitive_number, Toast.LENGTH_SHORT).show();
                 return;
             }
             setTime(millisInput);
@@ -208,5 +208,6 @@ public class TimerFragment extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
         binding = null;
+        view = null;
     }
 }

@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Account.LoginFragment">
 
@@ -13,20 +14,32 @@
         android:gravity="center_vertical"
         android:orientation="vertical">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_in_with_email"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size20"
+            android:gravity="center_horizontal">
+        </TextView>
+
     <com.google.android.material.textfield.TextInputLayout
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/white"
         app:boxBackgroundMode="outline"
         app:boxStrokeWidth="2dp"
         app:hintAnimationEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edit_text_account_name"
+            android:id="@+id/edit_text_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/please_enter_your_login"
-            android:inputType="text|textCapSentences" />
+            android:textColor="@color/white"
+            android:hint="@string/please_enter_your_email"
+            android:inputType="textEmailAddress" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -34,6 +47,7 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/white"
         app:boxBackgroundMode="outline"
         app:boxStrokeWidth="2dp"
         app:hintAnimationEnabled="true">
@@ -42,15 +56,19 @@
             android:id="@+id/edit_text_account_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/white"
             android:hint="@string/please_enter_your_password"
-            android:inputType="textPassword|numberPassword" />
+            android:inputType="textPassword" />
 
     </com.google.android.material.textfield.TextInputLayout>
+
+
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button_login_account"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/white"
             android:layout_marginHorizontal="@dimen/margin20"
             android:padding="@dimen/padding5"
             android:maxLines="1"
@@ -60,15 +78,42 @@
 
         <com.google.android.material.button.MaterialButton
             style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+            android:id="@+id/button_forgot_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textColor="@color/white"
+            android:text="@string/forgot_password_click_here" />
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.AppCompat.CompoundButton.CheckBox"
             android:id="@+id/button_registration_account"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/margin20"
-            android:padding="@dimen/padding5"
-            android:maxLines="1"
-            android:text="@string/registration"
-            app:cornerRadius="10dp"
-            app:elevation="10dp" />
+            android:textColor="@color/white"
+            android:gravity="center_horizontal"
+            android:text="@string/registration" />
+
+
+        <ProgressBar
+            android:id="@+id/progressBarLogin"
+            style="?android:attr/progressBarStyle"
+            android:layout_gravity="center_horizontal"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content" />
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+            android:id="@+id/button_continue_without_registration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:gravity="center_horizontal"
+            android:text="@string/continue_without_account" />
+
+
 
 
     </LinearLayout>
